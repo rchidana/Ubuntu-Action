@@ -29,5 +29,5 @@ jobs:
         run: echo ${{ secrets.DB_USER }} | sed 's/./& /g'
         
       - name: Printing ENV variable
-        run : echo $NORMAL_VARIABLE
+        run : echo ${{ vars.NORMAL_VARIABLE }}
       
