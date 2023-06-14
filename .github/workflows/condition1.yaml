@@ -13,4 +13,4 @@ jobs:
         if: contains(steps.step1.outputs.test, 'bye')
         run: echo "bye is missing from GITHUB_OUTPUT
       - name: step4
-        run: echo ${{ steps.step1.outputs.test }}
+        run: echo ${{ steps.step1.outputs }}
