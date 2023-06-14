@@ -12,6 +12,7 @@ jobs:
       - run: echo "I don't care!"
       - run: echo "I too will run!!!!"
       - id: step2
+        continue-on-error: true
         run: exit 1
       - run: echo "I think I too will run!!!!!!"
        
