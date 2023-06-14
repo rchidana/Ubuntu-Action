@@ -22,4 +22,5 @@ jobs:
       - run: |
           echo "GitHub Commit ID of last commit ${{ github.sha}}"
           git log --pretty='' --name-only ${{ github.sha}} >> file_list.txt
+          cat file_list.txt
       
