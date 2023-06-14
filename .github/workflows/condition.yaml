@@ -1,0 +1,15 @@
+name: Conditional Workflow
+on: push
+    
+    workflow_dispatch:
+
+jobs:
+  number_generator:
+    runs-on: ubuntu-latest
+    steps:
+      - id: generator
+        run: echo "num=$RANDOM % 2" 
+      - if: steps.generator.outputs.num == 0
+        run: echo zero
+      - if: steps.generator.outputs.num == 1
+        run: echo one
