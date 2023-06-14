@@ -24,7 +24,7 @@ jobs:
           git diff-tree --no-commit-id --name-only -r ${{ github.sha}}
           git diff-tree --no-commit-id --name-only -r ${{ github.sha}} >> file_list.txt
           mkdir Released_Files
-          for file in $(<file_list); do cp "$file" Released_Files; done
+          for file in $(<file_list.txt); do cp "$file" Released_Files; done
           ls
           ls Released_Files
           
