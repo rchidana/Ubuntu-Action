@@ -14,15 +14,17 @@ jobs:
   environ-test1:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      JOB_ENV: Weather  
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Print host name
-      run: echo "Host is $HOST_NAME"
+      run: echo "ENV is accessible within the step $STEP_ENV"
       env:
-        HOST_NAME: Earthly
-    - name: This step may not have access to the ENV variable?? or does it??
-      run: echo "Host in the next step is $HOST_NAME"
+        STEP_ENV: Earthly
+    - name: This step may not have access to the ENV variable?? but what about job level ENV??
+      run: echo "Host in the next step is $HOST_NAME and Job level ENV value is $JOB_ENV"
          
           
       
