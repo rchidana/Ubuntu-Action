@@ -18,3 +18,6 @@ jobs:
         env:
           First_Name: Mona
           DAY_OF_WEEK: Wednesday
+      - name: "Create a new Env Variable"
+        run: echo "company=microsoft" >> $GITHUB_ENV
+      - run: echo $company
