@@ -21,6 +21,8 @@ jobs:
       run: echo "Host is $HOST_NAME"
       env:
         HOST_NAME: Earthly
+    - name: This step may not have access to the ENV variable?? or does it??
+      run: echo "Host in the next step is $HOST_NAME"
          
           
       
