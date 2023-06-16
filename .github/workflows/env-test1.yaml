@@ -24,7 +24,4 @@ jobs:
       env:
         STEP_ENV: Earthly
     - name: This step may not have access to the ENV variable?? but what about job level ENV??
-      run: echo "Host in the next step is $HOST_NAME and Job level ENV value is $JOB_ENV"
-         
-          
-      
+      run: echo "Host in the next step is $STEP_ENV and Job level ENV value is $JOB_ENV"
